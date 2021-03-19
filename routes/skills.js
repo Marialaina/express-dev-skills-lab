@@ -11,7 +11,10 @@ const skillsCtrl = require(`../controllers/skills`)
 
 //4) DEFINE OUR ROUTES
 //all routes in this module start at /skills
+
 router.get(`/`, skillsCtrl.index);
+router.get(`/:id`, skillsCtrl.show)
+// router.get(`/:id`, todosCtrl.show)
 //5) EXPORT THE ROUTER OBJECT
 
 module.exports = router;
