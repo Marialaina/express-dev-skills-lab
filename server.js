@@ -1,5 +1,6 @@
 //REQUIRE MODULES
 const express = require(`express`);
+const skillsRouter = require(`./routes/skills`)
 
 //CREATE THE EXPRESS LAB
 
@@ -14,9 +15,14 @@ app.set(`view engine`, `ejs`);
 //MOUNT MIDDLEWARE (app.use)
 
 //MOUNT ROUTES
+
+
 app.get(`/`, (req, res) => {
     res.render(`index`);
 });
+
+//all routes pertaining to /skills/*
+app.use(`/skills`, skillsRouter)
 
 //TELL THE APP TO LISTEN ON PORT 3000
 
