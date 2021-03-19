@@ -9,11 +9,10 @@
 <body>
     <h1> Here's all your skills </h1>
     <ul> 
-        <% skills.forEach((s) => { %>
+        <% skills.forEach((s, idx) => { %>
             <li>
-              <strong> Skill: </strong><%= s.skill %> 
-              /
-              <strong> Level: </strong><%= s.level %> 
+             <a href="/skills/<%= idx %>"> <strong> Skill: </strong><%= s.skill %> 
+              
             </li>
         <% });%>
     </ul>
