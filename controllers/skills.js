@@ -12,8 +12,15 @@ const show = (req, res) => {
     });
 }
 
-// const newSkill = (req, res) => {
-//     res.render(`views/skills/show`)
+const newSkill = (req, res) => {
+    res.render(`views/skills/show`)
+}
+
+// const createSkill = (req, res) => {
+//     console.log(req.body);
+//     req.body.done = false;
+//     Skill.createSkill(req.body);
+//     res.redirect('/skills')
 // }
 
 
@@ -21,5 +28,7 @@ const show = (req, res) => {
 
 module.exports = {
     index,
-    show
+    show,
+    // new: newSkill,
+    // createSkill
 }

@@ -11,12 +11,19 @@ const getAll = () => {
 
 //Function to get one todo
 const getOne = (index) => {
-    return skills[index]
+    return skills[index];
 }
+
+//creating a skill function
+const createSkill = (skill) => {
+    skills.push(skill);
+}
+
 
 
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    createSkill
 };
