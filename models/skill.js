@@ -15,8 +15,8 @@ const getOne = (index) => {
 }
 
 //creating a skill function
-const createSkill = (skill) => {
-    skills.push(skill);
+const createSkill = (id) => {
+    skills.push(id);
 }
 
 const deleteOne = (id) => {
