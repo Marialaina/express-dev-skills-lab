@@ -16,12 +16,17 @@ const newSkill = (req, res) => {
     res.render(`views/skills/show`)
 }
 
-// const createSkill = (req, res) => {
-//     console.log(req.body);
-//     req.body.done = false;
-//     Skill.createSkill(req.body);
-//     res.redirect('/skills')
-// }
+const createSkill = (req, res) => {
+    console.log(req.body);
+    req.body.done = false;
+    Skill.createSkill(req.body);
+    res.redirect('/skills')
+}
+
+const deleteSkill = (req, res) => {
+    Skill.deleteOne(req.params.id);
+    res.redirect('/skills')
+}
 
 
 
@@ -29,6 +34,7 @@ const newSkill = (req, res) => {
 module.exports = {
     index,
     show,
-    // new: newSkill,
-    // createSkill
+    new: newSkill,
+    createSkill,
+    delete: deleteSkill
 }

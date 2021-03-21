@@ -1,6 +1,8 @@
 //REQUIRE MODULES
 const express = require(`express`);
 const skillsRouter = require(`./routes/skills`)
+const methodOverride = require(`method-override`)
+
 
 //CREATE THE EXPRESS LAB
 
@@ -13,6 +15,11 @@ const app = express();
 app.set(`view engine`, `ejs`);
 
 //MOUNT MIDDLEWARE (app.use)
+
+app.use(express.urlencoded({extended: false}))
+
+//enable method override
+app.use(methodOverride(`_method`))
 
 //MOUNT ROUTES
 
